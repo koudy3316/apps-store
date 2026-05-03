@@ -5,80 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aplikace ke stažení</title>
   <style>
-    body { font-family: Arial; background: #f4f6f8; margin: 0; padding: 0; text-align: center; }
+    body { font-family: Arial; background: #f4f6f8; margin: 0; text-align: center; }
     h1 { background: #222; color: white; padding: 20px; margin: 0; }
     .container { padding: 20px; }
-    .app { background: white; margin: 20px auto; padding: 20px; max-width: 400px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .app { background: white; margin: 20px auto; padding: 20px; max-width: 420px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
     img { width: 180px; margin: 10px 0; }
-    button { background: #007bff; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-size: 16px; }
+    button { background: #007bff; color: white; border: none; padding: 12px 18px; border-radius: 8px; cursor: pointer; font-size: 15px; }
     button:hover { background: #0056b3; }
-    p { margin: 8px 0; }
+    input { width: 90%; padding: 10px; margin: 8px 0; border-radius: 6px; border: 1px solid #ccc; }
+    small { color: gray; display:block; margin-top:6px; }
   </style>
 </head>
 <body>
 
 <h1>Stáhni si aplikaci za 10 Kč</h1>
+<p>Zaplať přes QR kód (10 Kč) a odešli formulář. Po kontrole platby ti aplikaci pošlu na email.</p>
 
 <div class="container">
 
   <div class="app">
     <h2>BACheck</h2>
     <p>Kontrola bankovních údajů</p>
-    <img src="qr-bacheck.png" alt="QR kód">
-    <p>Zaplať 10 Kč (VS: 101)</p>
-    <a href="https://forms.gle/TVUJ_FORMULAR">
-      <button>Zaplatil jsem – získat aplikaci</button>
-    </a>
+    <img src="qr-bacheck.png" alt="QR">
+    <p>10 Kč (VS: 101)</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScETI4DJGCV8HWQk6H7jMfDc7uQBc1bgXlhCzLPXd_TPkUGKA/formResponse" method="POST">
+      <input type="email" name="email" placeholder="Tvůj email" required>
+      <input type="hidden" name="app" value="BACheck">
+      <input type="hidden" name="vs" value="101">
+      <button type="submit">Zaplatil jsem – odeslat</button>
+    </form>
   </div>
 
   <div class="app">
     <h2>BNCheck</h2>
     <p>Kontrola čísel účtů</p>
-    <img src="qr-bncheck.png" alt="QR kód">
-    <p>Zaplať 10 Kč (VS: 102)</p>
-    <a href="https://forms.gle/TVUJ_FORMULAR">
-      <button>Zaplatil jsem – získat aplikaci</button>
-    </a>
+    <img src="qr-bncheck.png" alt="QR">
+    <p>10 Kč (VS: 102)</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScETI4DJGCV8HWQk6H7jMfDc7uQBc1bgXlhCzLPXd_TPkUGKA/formResponse" method="POST">
+      <input type="email" name="email" placeholder="Tvůj email" required>
+      <input type="hidden" name="app" value="BNCheck">
+      <input type="hidden" name="vs" value="102">
+      <button type="submit">Zaplatil jsem – odeslat</button>
+    </form>
   </div>
 
   <div class="app">
     <h2>Bottle</h2>
     <p>Jednoduchá hra</p>
-    <img src="qr-bottle.png" alt="QR kód">
-    <p>Zaplať 10 Kč (VS: 103)</p>
-    <a href="https://forms.gle/TVUJ_FORMULAR">
-      <button>Zaplatil jsem – získat aplikaci</button>
-    </a>
+    <img src="qr-bottle.png" alt="QR">
+    <p>10 Kč (VS: 103)</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScETI4DJGCV8HWQk6H7jMfDc7uQBc1bgXlhCzLPXd_TPkUGKA/formResponse" method="POST">
+      <input type="email" name="email" placeholder="Tvůj email" required>
+      <input type="hidden" name="app" value="Bottle">
+      <input type="hidden" name="vs" value="103">
+      <button type="submit">Zaplatil jsem – odeslat</button>
+    </form>
   </div>
 
   <div class="app">
     <h2>ENG-CZE Learning</h2>
     <p>Výuka angličtiny</p>
-    <img src="qr-engcze.png" alt="QR kód">
-    <p>Zaplať 10 Kč (VS: 104)</p>
-    <a href="https://forms.gle/TVUJ_FORMULAR">
-      <button>Zaplatil jsem – získat aplikaci</button>
-    </a>
+    <img src="qr-engcze.png" alt="QR">
+    <p>10 Kč (VS: 104)</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScETI4DJGCV8HWQk6H7jMfDc7uQBc1bgXlhCzLPXd_TPkUGKA/formResponse" method="POST">
+      <input type="email" name="email" placeholder="Tvůj email" required>
+      <input type="hidden" name="app" value="ENG-CZE Learning">
+      <input type="hidden" name="vs" value="104">
+      <button type="submit">Zaplatil jsem – odeslat</button>
+    </form>
   </div>
 
   <div class="app">
     <h2>IBANCheck</h2>
     <p>Ověření IBAN</p>
-    <img src="qr-iban.png" alt="QR kód">
-    <p>Zaplať 10 Kč (VS: 105)</p>
-    <a href="https://forms.gle/TVUJ_FORMULAR">
-      <button>Zaplatil jsem – získat aplikaci</button>
-    </a>
+    <img src="qr-iban.png" alt="QR">
+    <p>10 Kč (VS: 105)</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScETI4DJGCV8HWQk6H7jMfDc7uQBc1bgXlhCzLPXd_TPkUGKA/formResponse" method="POST">
+      <input type="email" name="email" placeholder="Tvůj email" required>
+      <input type="hidden" name="app" value="IBANCheck">
+      <input type="hidden" name="vs" value="105">
+      <button type="submit">Zaplatil jsem – odeslat</button>
+    </form>
   </div>
 
   <div class="app">
     <h2>ScoreKeeper</h2>
     <p>Počítadlo skóre</p>
-    <img src="qr-score.png" alt="QR kód">
-    <p>Zaplať 10 Kč (VS: 106)</p>
-    <a href="https://forms.gle/TVUJ_FORMULAR">
-      <button>Zaplatil jsem – získat aplikaci</button>
-    </a>
+    <img src="qr-score.png" alt="QR">
+    <p>10 Kč (VS: 106)</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScETI4DJGCV8HWQk6H7jMfDc7uQBc1bgXlhCzLPXd_TPkUGKA/formResponse" method="POST">
+      <input type="email" name="email" placeholder="Tvůj email" required>
+      <input type="hidden" name="app" value="ScoreKeeper">
+      <input type="hidden" name="vs" value="106">
+      <button type="submit">Zaplatil jsem – odeslat</button>
+    </form>
   </div>
 
 </div>
